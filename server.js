@@ -2,12 +2,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const mongojs = require('mongojs');
+
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-//Mongo Database & Collections
-const databaseUrl = 'fitnessTracker';
-const collections = ['exercises'];
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-const db = mongojs(databaseUrl, collections);
+app.use(express.static("public"));
+
+
+//Establish connection
+mongoose.connect(process.env.MONGODB_URI || 'mongodb:localhost/fitnessTracker')
