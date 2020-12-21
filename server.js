@@ -12,6 +12,9 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+const trainer = require('./models/trainer');
 
 //Establish connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb:localhost/fitnessTracker')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fitnessTracker', {
+    useNewUrlParser: true
+});
