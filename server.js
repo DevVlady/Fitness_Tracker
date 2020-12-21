@@ -1,7 +1,7 @@
 //Acquiring all neccessary packages using require method
 const express = require('express');
 const mongoose = require('mongoose');
-const morgan = require('morgan');
+const logger = require('morgan');
 
 const PORT = process.env.PORT || 3000;
 
@@ -12,9 +12,16 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-const trainer = require('./models/trainer');
+//Routes
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
 
 //Establish connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fitnessTracker', {
-    useNewUrlParser: true
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fitnessApp', {
+    useNewUrlParser: true,
+    useFindAndModify: false
 });
+
+app.listen(PORT, () => {
+    console.log(`App running on port ${PORT}!`);
+  });
