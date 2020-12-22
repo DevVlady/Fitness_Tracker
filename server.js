@@ -13,8 +13,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //Routes
-// app.use(require("./routes/apiRoutes.js"));
-// app.use(require("./routes/htmlRoutes.js"));
+app.use(require("./routes/apiRoutes.js"));
+app.use(require("./routes/htmlRoutes.js"));
 
 //Establish connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fitnessApp', {
