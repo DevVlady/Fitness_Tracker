@@ -21,6 +21,8 @@ app.use(require("./routes/htmlRoutes.js"));
 //Establish connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/fitnessApp', {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
     useFindAndModify: false
 });
 
