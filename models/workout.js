@@ -40,6 +40,12 @@ const workoutSchema = new Schema({
                 // trim: true,
                 required: "Enter a duration for workout"
             },
+            distance: {
+                type: Number,
+                // trim: true,
+                required: "Enter distance for workout"
+            },
+
         }
     ]
 });
