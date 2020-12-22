@@ -1,6 +1,6 @@
+//Reference & resource: Unit 17, Activity 14
 // Exporting an object containing all of our models
-
 module.exports = {
-    Workout: require("./Book"),
-    Exercise: require("./Library")
+    Workout: require("./workout"),
+    Exercise: require("./exercise")
   };
