@@ -18,8 +18,8 @@ router.post("/api/workouts", ({ body }, res) => {
 router.post("/api/workouts/:id", (req, res) => {
     Workout.findByIdAndUpdate(
         req.params.id,
-        {$push: {exercises: req.body}},
-        {new: true}
+        { $push: { exercises: req.body } },
+        { new: true }
     )
         .then(dbWorkout => {
             res.json(dbWorkout);
@@ -28,7 +28,6 @@ router.post("/api/workouts/:id", (req, res) => {
             res.status(400).json(err);
         });
 });
-
 
 //Route to find existing workouts in database
 router.get("/api/workouts", (req, res) => {
@@ -40,6 +39,17 @@ router.get("/api/workouts", (req, res) => {
         .catch(err => {
             res.status(400).json(err);
         });
+});
+
+//Route to find existing workouts in database
+router.get("/api/workouts/range", (req, res) => {
+    Workout.find({}, (err, data) => {
+        if (err) {
+            res.status(400).json(err);
+        } else {
+            res.json(data);
+        }
+    })
 });
 
 module.exports = router;
