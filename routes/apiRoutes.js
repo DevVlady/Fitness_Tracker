@@ -13,3 +13,15 @@ router.post("/api/workouts", ({ body }, res) => {
             res.status(400).json(err);
         });
 });
+
+//Route to find existing workouts in database
+router.get("/api/workouts", (req, res) => {
+    db.Workout.find({})
+        .sort({ date: -1 })
+        .then(dbWorkout => {
+            res.json(dbWorkout);
+        })
+        .catch(err => {
+            res.status(400).json(err);
+        });
+});
