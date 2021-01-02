@@ -4,44 +4,71 @@
 
 ## Description
 
-#### This is an application where users can keep track of their fitness related activities. Users can add workouts, add exercises, keep track of their progress, and get a visual graph of their activity.
+This is an application where users can keep track of their fitness related activities. Users can add workouts, add exercises, keep track of their progress, and get a visual graph of their activity.
 
 ## Table of Contents
 
 * [License](#license)
 
+* [Image](#image)
+
+* [Website](#website)
+
+* [Installation](#installation)
+
 * [Usage](#usage)
 
-* [Link](#link)
+* [Contributing](#contributing)
 
-* [Preview](#preview)
+* [Tests](#tests)
 
-* [Contributions](#contributions)
+* [Technologies](#technologies)
 
 * [Questions](#questions)
 
 ## License
 
-#### This application is licensed under the Apache 2.0 license
+This project is licensed under the APACHE 2.0 license
+
+## Image
+
+![image](https://user-images.githubusercontent.com/71519918/103468180-321b3900-4d1c-11eb-805b-7cd1bba01959.png)
+
+![image](https://user-images.githubusercontent.com/71519918/103468352-e073ae00-4d1d-11eb-8768-17850ce30f20.png)
+
+## Website
+
+Deploy Link: https://fitness-health-tracker.herokuapp.com/
+
+## Installation
+
+Run the following command "npm i" in your terminal to install any dependencies for this application
 
 ## Usage
 
-*  TO begin the user can launch the application by going to deployed link provided in the documentation.
-*  ONCE the application is launched, the user will
+Steps on how to properly use the fitness tracker application are provided below.
 
-## Link
+* TO start application click on the deploy link provided in this document.
+* THEN click on the new workout button to add a workout and complete the form displayed.
+* TO complete workout click on complete button.
+* TO add workout click on the add exercise button.
+* WHEN you want to continue a workout, click on the continue workout button.
+* ONCE done click complete workout and then your workout will be logged into the application.
+* TO view the graph with all your workouts added click on the dashboard button at the top of the page.
 
-https://fitness-health-tracker.herokuapp.com/
+## Contributing
 
-## Preview
-![image](https://user-images.githubusercontent.com/71519918/103330212-16ffaf00-4a26-11eb-904e-07cd875956bd.png)
+This project/repo has been contributed by Vladimir Dimitrov. Anyone can contribute to this project/repo by either reaching out to the owner or using the fork method through GitHub
 
-![image](https://user-images.githubusercontent.com/71519918/103330237-31d22380-4a26-11eb-964e-2cca8275ccd9.png)
+## Tests
 
-## Contributions
+Run the following command "npm test" in your terminal to run tests for this application
 
-#### Contributions to this repo can be made by anyone. To contribute, simply fork your own repo using the fork method on GitHub.
+## Technologies
+
+Technologies, applications, and programs used in this project are HTML5, CSS3, JavaScript, Express.js, Node.js, MongoDB, & Heroku
 
 ## Questions
 
-#### If you have any questions about the repo, please open an issue or contact me directly at vladimir.s.dimitrov14@gmail.com. You can find more of my work at Vlady14 (https://github.com/Vlady14).
+If you have any questions about the project/repo, please open an issue or contact me directly at <vladimir.s.dimitrov14@gmail.com>.
+You can find more of my work at Vlady14 (https://github.com/Vlady14).
